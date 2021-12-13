@@ -1,0 +1,37 @@
+@import '../../styles/all';
+
+.container {
+  display: flex;
+  padding: 40px;
+
+  @media screen and (max-width: $screen-xs) {
+    display: block;
+    padding: 20px;
+  }
+}
+
+.content {
+  padding-right: 20px;
+  flex: 1;
+
+  @media screen and (max-width: $screen-xs) {
+    padding-right: 0px;
+  }
+}
+
+.sidebar {
+  width: 320px;
+
+  @media screen and (max-width: $screen-xs) {
+    width: 100%;
+  }
+}
+
+.chatContainer {
+  background: #1F1D38;
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  border-radius: 10px;
+  margin: 0px;
+  height: 100%;
+  padding: 10px;
+}

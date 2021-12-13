@@ -1,0 +1,22 @@
+@import '../../styles/all';
+
+.errorTextContainer
+{
+    display:          flex;
+    align-items:      center;
+    width:            100%;
+    min-height:       40px;
+    padding:          12px 12px 12px 21px;
+    border-radius:    8px;
+    background-color: rgba(255, 88, 88, 0.1);
+    color:            $colorRedDark;
+
+    .errorTextIcon
+    {
+        height:       20px;
+        width:        20px;
+        margin-right: 16px;
+
+        @include svgSelectorColor($colorRedLight)
+    }
+}

@@ -1,0 +1,39 @@
+@import '../../styles/all';
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+
+    @media (max-width: $screen-md) {
+        width: 50px;
+        height: 50px;
+    }
+
+    svg {
+        width: 60px;
+        height: 60px;
+
+        @media (max-width: $screen-md) {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .circleBackground,
+    .circleProgress {
+    fill: none;
+    }
+
+    .circleBackground {
+    stroke: transparent;
+    }
+
+    .circleProgress {
+    stroke: $colorWhite;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    }
+}

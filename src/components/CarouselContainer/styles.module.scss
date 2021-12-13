@@ -1,0 +1,86 @@
+@import '../../styles/all';
+
+.carouselContainer
+{
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    width: 100%;
+
+    .titleContainer
+    {
+        display:         flex;
+        flex-direction:  row;
+        align-items:     center;
+        justify-content: space-between;
+        margin-bottom:   30px;
+
+        .title
+        {
+            color:       $colorWhite;
+            font-size:   24px;
+        }
+
+        .titleLink {
+            font-size: 14px;
+            color: $colorWhite;
+            line-height: 12px;
+            letter-spacing: 0.6px;
+            margin-left: 20px;
+        }
+    }
+
+    .carousel
+    {
+        display: flex;
+        align-items: flex-start;
+
+        @media (max-width: 1300px) {
+            overflow-x: scroll;
+        }
+
+        a {
+            text-decoration: none;
+
+            @media (max-width: $screen-md) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.scrollButtons
+{
+    display: flex;
+    justify-content: center;
+    align-items:     center;
+
+    @media (min-width: $screen-md)
+    {
+        // display: flex;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .arrowNext,
+    .arrowPrev
+    {
+        background-color: transparent;
+        border:           none;
+        height:           60px;
+        width:            60px;
+        display:          flex;
+        justify-content:  center;
+        align-items:      center;
+        cursor: pointer;
+
+        &.inactive {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+}

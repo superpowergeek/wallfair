@@ -1,0 +1,40 @@
+@mixin svgColor($color) {
+    @include svgColorFill($color);
+    @include svgColorStroke($color);
+}
+
+@mixin svgSelectorColor($color) {
+    svg {
+        @include svgColor($color);
+    }
+}
+
+@mixin svgColorFill($color) {
+    * {
+        fill: $color;
+    }
+}
+
+@mixin svgColorFillImportant($color) {
+    * {
+        fill: $color !important;
+    }
+}
+
+@mixin svgColorStroke($color) {
+    * {
+        stroke: $color;
+    }
+}
+
+@mixin svgColorStrokeImportant($color) {
+    * {
+        stroke: $color !important;
+    }
+}
+
+@mixin ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
